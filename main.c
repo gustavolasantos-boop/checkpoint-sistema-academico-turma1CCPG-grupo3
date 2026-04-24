@@ -17,7 +17,7 @@ void menu(void){
 int main(){
     int opcao;
     float nota_1, nota_2, media;
-
+    int continuar = 1;
 
     
     menu();
@@ -74,6 +74,17 @@ int main(){
 
     break;
 }
+
+    case 6:
+    printf("Saindo...\n");
+    continuar = 0;
+    break;
+
+    default:
+    printf("Opcao invalida!\n");
     }
+
+    while(continuar);
+    
     return 0;
 }
