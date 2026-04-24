@@ -52,11 +52,28 @@ int main(){
     break;
      
     case 4:
-        printf("Nota1: %.2f\n", nota_1);
-        printf("Nota2: %.2f\n", nota_2);
-        printf("Media: %.2f\n", media);
-        break;
+    printf("Nota1: %.2f\n", nota_1);
+    printf("Nota2: %.2f\n", nota_2);
+    printf("Media: %.2f\n", media);
+     break;
 
+
+    case 5:{
+    float a, b, c;
+
+    printf("Digite o valor de a: ");
+    scanf("%f", &a);
+
+    printf("Digite o valor de b: ");
+    scanf("%f", &b);
+
+    printf("Digite o valor de c: ");
+    scanf("%f", &c);
+
+    printf("f'(x) = %.2fx + %.2f\n", 2*a, b);
+
+    break;
+}
     }
     return 0;
 }
