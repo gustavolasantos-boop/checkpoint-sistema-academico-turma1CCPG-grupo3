@@ -15,7 +15,8 @@ void menu(void){
 }
 
 int main(){
-
+int opcao;
+float nota_1, nota_2, media;
 
     
     menu();
