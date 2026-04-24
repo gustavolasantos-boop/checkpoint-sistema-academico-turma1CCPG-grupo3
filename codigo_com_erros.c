@@ -11,7 +11,7 @@ int main() {
 
     media = (nota1 + nota2) / 2; // Corrigi a ausencia de parenteses entre as variáveis
 
-    if (media = 6) {
+    if (media >= 6) { // Corrigi a falta de operador relacional
         printf("Aluno aprovado\n");
     } else {
         printf("Aluno reprovado\n");
