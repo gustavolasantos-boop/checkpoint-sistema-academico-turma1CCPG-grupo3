@@ -14,48 +14,72 @@ void menu(void){
 
 }
 
-int main(){
+ 
+ int main(){
     int opcao;
-    float nota_1, nota_2, media;
+    float nota_1 = 0, nota_2 = 0, media = 0;
     int continuar = 1;
+    int notas_inseridas = 0;
+    int media_calculada = 0;
 
-    
+while(continuar){
     menu();
-    scanf("%d", &opcao);
+    if(scanf("%d", &opcao)!= 1){
+        printf("Entrada invalida! Por favor, digite um numero.\n");
+        return 1;
+
+    };
+
+
     switch(opcao){
 
     case 1: 
-
     printf("Digite sua primeira nota: ");
     scanf("%f", &nota_1);
+
     printf("Digite sua segunda nota: ");
     scanf("%f", &nota_2);
+
     if(nota_1 < 11 && nota_1 >= 0 && nota_2 < 11 && nota_2 >= 0){
-        
+        printf("Notas inseridas com sucesso!\n");
+        notas_inseridas = 1;
+        media_calculada = 0;
 
     }else{
         printf("Notas fora do limite apresentadas!");
+        notas_inseridas = 0;
     }
     break;
     
     case 2:
-    media= (nota_1 + nota_2) /2;
-    printf(" media calculada:%.2", media);
+    if(notas_inseridas == 0){
+        printf("Por favor, insira as notas primeiro!\n");
+    }else{
+        media = (nota_1 + nota_2) / 2;
+        media_calculada = 1;
+        printf("Media calculada: %.2f\n", media);
+    }
     break;
 
     case 3:
-    if(media >= 7){
-    printf("Aprovado\n");
+    if(media_calculada == 0){
+        printf("Por favor, calcule a media primeiro!\n");
+    }else if(media >= 6){
+        printf("Aprovado\n");
     }else{
-    printf("Reprovado\n");
+        printf("Reprovado\n");
     }
     break;
      
     case 4:
-    printf("Nota1: %.2f\n", nota_1);
-    printf("Nota2: %.2f\n", nota_2);
-    printf("Media: %.2f\n", media);
-     break;
+    if(media_calculada == 0){
+        printf("Por favor, calcule a media primeiro!\n");
+    }else{
+        printf("Nota1: %.2f\n", nota_1);
+        printf("Nota2: %.2f\n", nota_2);
+        printf("Media: %.2f\n", media);
+    }
+    break;
 
 
     case 5:{
@@ -82,9 +106,9 @@ int main(){
 
     default:
     printf("Opcao invalida!\n");
+    
     }
-
-    while(continuar);
+}
     
     return 0;
 }
