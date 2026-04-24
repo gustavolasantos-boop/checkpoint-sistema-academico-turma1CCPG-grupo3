@@ -37,6 +37,13 @@ int main(){
         printf("Notas fora do limite apresentadas!");
     }
     break;
+    
+    case 2:
+    media= (nota_1 + nota_2) /2;
+    printf(" media calculada:%.2\n", media);
+    break;
+
+    
 
     
      
